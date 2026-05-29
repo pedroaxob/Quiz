@@ -1,0 +1,149 @@
+:root {
+  --green: #1f7a3f;
+  --light: #f5f7f5;
+  --border: #d9e2d9;
+  --text: #1e2a1f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e9f1ea;
+  color: var(--text);
+}
+
+.app {
+  width: min(900px, 92%);
+  margin: 30px auto;
+}
+
+.screen {
+  background: rgb(255, 255, 255);
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+h1, h2, p {
+  margin-top: 0;
+}
+
+.box {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+  background: var(--light);
+}
+
+.login-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.login-list button,
+#startBtn,
+#nextBtn,
+.option-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-list button {
+  background: white;
+  border: 1px solid var(--border);
+}
+
+.login-list button.active {
+  background: var(--green);
+  color: white;
+}
+
+.login-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 16px;
+}
+
+#startBtn,
+#nextBtn {
+  background: var(--green);
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.options {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.option-btn {
+  background: white;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.option-btn.correct {
+  background: #dff4e5;
+  border-color: #6bbf84;
+}
+
+.option-btn.wrong {
+  background: #f9dede;
+  border-color: #d46a6a;
+}
+
+#feedback {
+  font-weight: bold;
+  min-height: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  background-color: #009d2e;
+  background-image: url(bandeira.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-position: auto;
+}
+

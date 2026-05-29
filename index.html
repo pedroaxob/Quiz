@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz da Seleção Brasileira</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section id="homeScreen" class="screen">
+      <h1>Quiz da Seleção Brasileira</h1>
+      <p>Escolha um login e veja a tabela de pontuação.</p>
+
+      <div class="box">
+        <h2>Lista de login</h2>
+        <div id="loginList" class="login-list"></div>
+
+        <label for="customLogin">Ou digite outro nome</label>
+        <div class="login-row">
+          <input id="customLogin" type="text" placeholder="Seu login" />
+          <button id="startBtn">Começar</button>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Tabela de pontuação</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Login</th>
+              <th>Melhor pontuação</th>
+              <th>Tentativas</th>
+            </tr>
+          </thead>
+          <tbody id="scoreboardBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="quizScreen" class="screen hidden">
+      <h1 id="playerTitle">Jogador</h1>
+      <p id="questionCount"></p>
+      <p>Pontos: <span id="score">0</span></p>
+
+      <div class="box">
+        <h2 id="questionText"></h2>
+        <div id="options" class="options"></div>
+        <p id="feedback"></p>
+        <button id="nextBtn" class="hidden">Próxima</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
