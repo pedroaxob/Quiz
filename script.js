@@ -11,7 +11,7 @@ const questions = [
   },
   {
     question: "Qual seleção venceu o Brasil nos pênaltis em 2022?",
-    options: ["Croácia", "Chile", "Bélgica", "Uruguai"],
+    options: ["Argentina", "Croácia", "Bélgica", "Uruguai"],
     answer: "Croácia"
   },
   {
@@ -21,9 +21,34 @@ const questions = [
   },
   {
     question: "Qual jogador marcou gol na final de 2002 contra a Alemanha?",
-    options: ["Ronaldo", "Neymar", "Cafu", "Kaká"],
+    options: ["Kaká", "Neymar", "Cafu", "Ronaldo"],
     answer: "Ronaldo"
-  }
+  },
+  {
+    question: "Quem marcou o gol contra a Alemanha no 7x1?",
+    options: ["Neymar", "Fred", "Oscar", "Hulk"],
+    answer: "Oscar"
+  },
+  {
+    question: "Qual jogador marcou contra a Suiça em 2022?",
+    options: ["Casemiro", "Richarlison", "Neymar", "Vinicius Júnior"],
+    answer: "Casemiro"
+  },
+  {
+    question: "Quem foi o técnico na copa de 2010?",
+    options: ["Tite", "Diniz", "Dunga", "Felipão"],
+    answer: "Dunga"
+  },
+  {
+    question: "Quem perdeu o último pênalti do Brasil contra a Croácia??",
+    options: ["Neymar", "Marquinhos", "Casemiro", "Pedro"],
+    answer: "Marquinhos"
+  },
+  {
+    question: "Quantos gols o Endrick marcou pela seleção?",
+    options: ["5", "6", "3", "4"],
+    answer: "3"
+  },
 ];
 
 const fixedLogins = ["Aluno1", "Aluno2", "Aluno3", "Torcedor"];

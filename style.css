@@ -28,6 +28,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .hidden {
@@ -72,6 +73,7 @@ h1, h2, p {
 .login-list button.active {
   background: var(--green);
   color: white;
+  align-items: center;
 }
 
 .login-row {
@@ -116,7 +118,7 @@ th, td {
 .option-btn {
   background: white;
   border: 1px solid var(--border);
-  text-align: left;
+  text-align: center;
 }
 
 .option-btn.correct {
@@ -146,4 +148,3 @@ body {
   background-size: 100%;
   background-position: auto;
 }
-
