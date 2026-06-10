@@ -1,3 +1,6 @@
+const imagemAcerto = "acerto.png";
+const imagemErro = "erro.png";
+
 const questions = [
   {
     question: "Contra qual seleção o Brasil perdeu por 7x1 em 2014?",
@@ -68,6 +71,10 @@ const questionText = document.getElementById("questionText");
 const optionsEl = document.getElementById("options");
 const feedbackEl = document.getElementById("feedback");
 const nextBtn = document.getElementById("nextBtn");
+const resultScreen = document.getElementById("resultScreen");
+const resultTitle = document.getElementById("resultTitle");
+const resultImage = document.getElementById("resultImage");
+const continueBtn = document.getElementById("continueBtn");
 
 let selectedLogin = fixedLogins[0];
 let currentQuestion = 0;
@@ -189,10 +196,25 @@ function checkAnswer(button, chosen) {
   }
 
   scoreEl.textContent = score;
-  nextBtn.classList.remove("hidden");
+
+  if (chosen === q.answer) {
+    resultTitle.textContent = "Você acertou!";
+    resultImage.src = imagemAcerto;
+  } else {
+    resultTitle.textContent = "Você errou!";
+    resultImage.src = imagemErro;
+  }
+
+  setTimeout(() => {
+    quizScreen.classList.add("hidden");
+    resultScreen.classList.remove("hidden");
+  }, 800);
 }
 
 function finishGame() {
+  resultScreen.classList.add("hidden");
+  quizScreen.classList.remove("hidden");
+
   updateRanking(currentPlayer, score);
   quizScreen.innerHTML = `
     <h1>Fim do quiz</h1>
@@ -205,10 +227,13 @@ function finishGame() {
   });
 }
 
-nextBtn.addEventListener("click", () => {
+continueBtn.addEventListener("click", () => {
+  resultScreen.classList.add("hidden");
+
   currentQuestion += 1;
 
   if (currentQuestion < questions.length) {
+    quizScreen.classList.remove("hidden");
     showQuestion();
   } else {
     finishGame();
